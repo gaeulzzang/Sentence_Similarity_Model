@@ -50,6 +50,7 @@ git clone https://github.com/gaeulzzang/Sentence_Similarity_Model.git
 권장 SDK: 33 이상
 
 ### 3. 모델과 토크나이저는 앱 내부에 이미 포함되어 있음
+assets/model.onnx, assets/tokenizer.json 파일이 있어 별도 설정이 필요 없습니다.
 
 <br/>
 

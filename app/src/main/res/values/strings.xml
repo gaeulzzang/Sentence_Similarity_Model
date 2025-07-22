@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">SentenceSimilarity</string>
+    <string name="app_name">SentenceEmbedding</string>
+    <string name="chunk_header">청크 리스트</string>
+    <string name="chunk_list_header">청크 목록</string>
+    <string name="chunk_empty">청크가 없습니다.</string>
+    <string name="tf_placeholder">텍스트를 입력하세요.</string>
+    <string name="btn_search">청크 검색</string>
+    <string name="slider_label">N값: %1$s</string>
+    <string name="chunk_item_time">검색 시간: %1$sms</string>
+    <string name="chunk_item_result">검색 결과 (%1$s개)</string>
+    <string name="chunk_item_similarity">%1$d위 유사도: %2$.4f</string>
 </resources>

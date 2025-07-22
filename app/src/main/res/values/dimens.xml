@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btn_radius">8dp</dimen>
+    <dimen name="btn_horizontal_padding">16dp</dimen>
+    <dimen name="btn_vertical_padding">12dp</dimen>
+
+    <dimen name="tf_border_width">1dp</dimen>
+    <dimen name="tf_radius">8dp</dimen>
+
+    <dimen name="header_size">20sp</dimen>
+    <dimen name="header_horizontal_padding">4dp</dimen>
+    <dimen name="header_vertical_padding">12dp</dimen>
+    <dimen name="sub_header_size">16sp</dimen>
+
+    <dimen name="content_padding">16dp</dimen>
+    <dimen name="content_space">30dp</dimen>
+
+    <dimen name="chunk_space">8dp</dimen>
+    <dimen name="chunk_item_vertical_padding">8dp</dimen>
+</resources>

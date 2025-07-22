@@ -1,6 +1,6 @@
 # 🧠 온디바이스 문서 검색 앱 (Sentence Embedding 기반)
 
-이 프로젝트는 **Snowflake Arctic Embed (sentence)** 모델을 활용해  
+이 프로젝트는 **❄️Snowflake/snowflake-arctic-embed-s❄️** 모델을 활용해  
 사용자의 질의와 가장 유사한 문서 청크를 로컬에서 검색하는 안드로이드 앱입니다.
 
 > 벡터 임베딩부터 질의 검색까지 모든 과정을 **온디바이스**에서 처리합니다.  

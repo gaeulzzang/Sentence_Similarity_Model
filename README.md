@@ -24,6 +24,7 @@
 | 모델 임베딩    | [snowflake-arctic-embed-s](https://huggingface.co/Snowflake/snowflake-arctic-embed-s/tree/main/onnx) |
 | 모델 포맷      | ONNX |
 | 임베딩 라이브러리 | [shubham0204/Sentence-Embeddings-Android](https://github.com/shubham0204/Sentence-Embeddings-Android) |
+| 데이터 직렬화 | Protobuf |
 | 상태관리       | ViewModel + StateFlow |
 | 비동기 처리     | Kotlin Coroutine |
 

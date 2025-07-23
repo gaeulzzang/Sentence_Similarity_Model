@@ -7,3 +7,9 @@ plugins {
     alias(libs.plugins.hilt) apply false
     alias(libs.plugins.ktlint) apply false
 }
+
+buildscript {
+    dependencies {
+        classpath(libs.protobuf.gradle.plugin)
+    }
+}

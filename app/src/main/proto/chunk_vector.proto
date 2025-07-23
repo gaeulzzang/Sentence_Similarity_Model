@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package chunk;
+
+message ChunkVectorProto {
+  int32 id = 1;
+  string content = 2;
+  repeated float embedding = 3;
+}
+
+message ChunkVectorList {
+  repeated ChunkVectorProto vectors = 1;
+}

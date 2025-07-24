@@ -11,7 +11,7 @@ import javax.inject.Singleton
 class EmbeddingManager @Inject constructor(
     @ApplicationContext private val context: Context
 ) {
-    var embedding: SentenceEmbedding? = null
+    private var embedding: SentenceEmbedding? = null
 
     suspend fun initialize() {
         if (embedding != null) return

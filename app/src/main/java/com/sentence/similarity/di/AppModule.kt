@@ -1,7 +1,6 @@
 package com.sentence.similarity.di
 
 import android.content.Context
-import com.sentence.similarity.proto.ProtoVectorStorage
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -12,6 +11,14 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
+
+    @Provides
+    @Singleton
+    fun provideEmbeddingManager(
+        @ApplicationContext context: Context
+    ): EmbeddingManager {
+        return EmbeddingManager(context)
+    }
 
     @Singleton
     @Provides

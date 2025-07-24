@@ -1,4 +1,4 @@
-package com.sentence.similarity.proto
+package com.sentence.similarity.di
 
 import android.content.Context
 import chunk.ChunkVector.ChunkVectorList

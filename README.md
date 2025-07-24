@@ -24,6 +24,7 @@
 | 모델 임베딩    | [snowflake-arctic-embed-s](https://huggingface.co/Snowflake/snowflake-arctic-embed-s/tree/main/onnx) |
 | 모델 포맷      | ONNX |
 | 임베딩 라이브러리 | [shubham0204/Sentence-Embeddings-Android](https://github.com/shubham0204/Sentence-Embeddings-Android) |
+| 데이터 직렬화 | Protobuf |
 | 상태관리       | ViewModel + StateFlow |
 | 비동기 처리     | Kotlin Coroutine |
 
@@ -31,7 +32,7 @@
 
 ## 📦 APK 다운로드
 
-[👉 최신 버전 APK 다운로드](https://drive.google.com/file/d/1xEmY7nBKE6k71egBAMU8Xsx9qw_VUZlk/view?usp=sharing)
+[👉 최신 버전 APK 다운로드](https://drive.google.com/file/d/1uwMo5Ne97M6rA39PErg65Pc4opLUi18Q/view?usp=sharing)
 
 또는 Android Studio에서 직접 빌드해 테스트할 수 있습니다.
 

@@ -16,9 +16,7 @@ object AppModule {
     @Singleton
     fun provideEmbeddingManager(
         @ApplicationContext context: Context
-    ): EmbeddingManager {
-        return EmbeddingManager(context)
-    }
+    ): EmbeddingManager = EmbeddingManager(context)
 
     @Singleton
     @Provides

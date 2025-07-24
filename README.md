@@ -32,7 +32,7 @@
 
 ## 📦 APK 다운로드
 
-[👉 최신 버전 APK 다운로드](https://drive.google.com/file/d/1wTri5qt8qsuPLfC83WyV0nytbtkmgHUC/view?usp=sharing)
+[👉 최신 버전 APK 다운로드](https://drive.google.com/file/d/1-iEAkVnoZO9EwCy-_5u8yplxS55C4xiw/view?usp=sharing)
 
 또는 Android Studio에서 직접 빌드해 테스트할 수 있습니다.
 

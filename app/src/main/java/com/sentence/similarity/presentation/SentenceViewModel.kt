@@ -1,7 +1,6 @@
 package com.sentence.similarity.presentation
 
 import android.content.Context
-import androidx.compose.runtime.mutableStateListOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.sentence.similarity.di.EmbeddingManager
@@ -28,7 +27,8 @@ class SentenceViewModel @Inject constructor(
 
     private val llamaChunks = readPageContentsFromJsonl(LLAMA_JSON)
     private val qwenChunks = readPageContentsFromJsonl(QWEN_JSON)
-    private val vectorDB = mutableStateListOf<ChunkVector>()
+
+    private val _vectorDBState = MutableStateFlow<List<ChunkVector>>(emptyList())
 
     private val _initializedState = MutableStateFlow(false)
     val initializedState: StateFlow<Boolean> = _initializedState
@@ -55,15 +55,13 @@ class SentenceViewModel @Inject constructor(
         viewModelScope.launch(Dispatchers.IO) {
             val cached = protoVectorStorage.load()
             if (cached != null) {
-                vectorDB.clear()
-                vectorDB.addAll(cached)
+                _vectorDBState.value = cached
                 return@launch
             }
 
             val allChunks = llamaChunks + qwenChunks
             val result = buildVectorDB(allChunks)
-            vectorDB.clear()
-            vectorDB.addAll(result)
+            _vectorDBState.value = result
             protoVectorStorage.save(result)
         }
     }
@@ -90,7 +88,7 @@ class SentenceViewModel @Inject constructor(
         val startTime = System.nanoTime()
 
         val queryVector = embeddingManager.encode(query)
-        val results = vectorDB.map {
+        val results = _vectorDBState.value.map {
             val similarity = cosineSimilarity(queryVector, it.embedding)
             SearchResult(id = it.id, content = it.content, similarity = similarity)
         }.sortedByDescending { it.similarity }

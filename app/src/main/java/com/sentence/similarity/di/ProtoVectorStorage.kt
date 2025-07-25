@@ -4,13 +4,14 @@ import android.content.Context
 import chunk.ChunkVector.ChunkVectorList
 import chunk.ChunkVector.ChunkVectorProto
 import com.sentence.similarity.type.ChunkVector
+import dagger.hilt.android.qualifiers.ApplicationContext
 import java.io.File
 import javax.inject.Inject
 
 class ProtoVectorStorage @Inject constructor(
-    private val context: Context
+    @ApplicationContext private val context: Context
 ) {
-    private val file = File(context.filesDir, "vector_db.pb")
+    private val file = File(context.filesDir, VECTOR_DB_FILE)
 
     fun save(vectorDB: List<ChunkVector>) {
         val protoList = ChunkVectorList.newBuilder()
@@ -46,4 +47,8 @@ class ProtoVectorStorage @Inject constructor(
     }
 
     fun exists(): Boolean = file.exists()
+
+    companion object {
+        private const val VECTOR_DB_FILE = "vector_db.pb"
+    }
 }
